@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <div fxFlex="40">
+  <div fxFlex="40" *ngIf="dish">
     <h2>Comment</h2>
         <mat-list >
           <mat-list-item *ngFor="let Comment of dish.comments">
