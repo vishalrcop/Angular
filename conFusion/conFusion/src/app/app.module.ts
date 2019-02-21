@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import 'hammerjs';
 import { DishService } from './services/dish.service';
+import { LeaderService } from './services/leader.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -43,7 +44,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FlexLayoutModule,
     AppRoutingModule    
   ],
-  providers: [DishService],
+  providers: [DishService,
+              LeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
