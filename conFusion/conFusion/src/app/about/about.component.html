@@ -54,19 +54,19 @@
   </div>
 
 
-  <div fxFlex>
+<div fxFlex>
     <h2>Corporate Leadership</h2>
-      <mat-list *ngFor="let leader of leaders">
-        <mat-list-item> 
-          <div fxFlex="5">
-            <img matListAvatar src={{leader.image}} alt="image not found">
-          </div>
-          <div fxFlex="95">
-            <small><span>{{leader.name}}{{leader.abbr}}</span><br>
-            <span>{{leader.designation}}</span><br>
-            <span>{{leader.description | slice:0}}</span></small>
-          </div>
-        </mat-list-item>
-      </mat-list>
+    <mat-list>
+    <mat-list-item *ngFor="let leader of leaders">
+      <img matListAvatar src={{leader.image}} alt={{leader.name}}>
+      <h1 matLine>{{leader.name}} {{leader.abbr}}</h1>
+      <p matLine>
+        <span>{{leader.designation}}</span>
+      </p>
+      <p matLine>
+        <span>{{leader.description}}</span>
+      </p>
+         </mat-list-item>
+        </mat-list>
   </div>
 </div>
