@@ -19,6 +19,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { baseURL } from './shared/baseurl';
 
 import 'hammerjs';
 
@@ -67,12 +70,15 @@ import { LoginComponent } from './login/login.component';
     MatSelectModule,
     MatProgressSpinnerModule,
     MatSliderModule,
-    ReactiveFormsModule   
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpModule  
   ],
   providers: [
     DishService,
     PromotionService,
-    LeaderService
+    LeaderService,
+    {provide: 'BaseURL', useValue: baseURL}
   ],
   entryComponents: [
     LoginComponent
